@@ -1,0 +1,11 @@
+Count the number of 1 bits in a number using only bitwise operations with Brian Kernighan’s Algorithm. 
+Runtime complexity O(m), where m is only the number of set bits.
+
+int countSetBits(int n) {
+    unsigned int count = 0;
+    while (n) {
+        n &= (n-1);
+        count++;
+    }
+    return count;
+}
